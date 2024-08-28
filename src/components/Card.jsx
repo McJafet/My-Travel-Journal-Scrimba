@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import pin from '../images/loc.png'
 import '../styles/Card.css'
+
 export default function Card(props) {
     return (
         <section className="section">
@@ -9,7 +10,7 @@ export default function Card(props) {
                 <div className="place-location">
                     <img src={pin} alt="pin" />
                     <p>{props.location}</p>
-                    <a href={props.locationUrl}>
+                    <a href={props.locationUrl} target='_blank'>
                         View on Google Maps
                     </a>
                 </div>
@@ -20,8 +21,7 @@ export default function Card(props) {
                 <p className="place-description">
                     {props.description}
                 </p>
-            </div>
-            
+            </div>  
         </section>
     )
 }
